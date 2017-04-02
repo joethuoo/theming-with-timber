@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" {{site.language_attributes}}>
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset={{site.charset}}>
+   <title>
+            {% if wp_title %}
+                  {{ wp_title }} - {{site.name}}
+            {% else %}
+                  {{ site.name }}
+            {% endif %}                 
+   </title>
+
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    {# <link rel="icon" href="{{ asset('img/favicon/favicon-32x32.png') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('img/favicon/favicon-144x144.png') }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('img/favicon/favicon-72x72.png') }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('img/favicon/favicon-54x54.png') }}"> #}
+    
+    <!-- CSS
+    ================================================== -->
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/bootstrap.min.css">
+    <!-- Template styles-->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/styles.css">
+    <!-- Responsive styles-->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/responsive.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/font-awesome.min.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/animate.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/owl.carousel.css">
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/owl.theme.css">
+    <!-- Colorbox -->
+    <link rel="stylesheet" href="wp-content/themes/timber-starter-theme/static/css/colorbox.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="wp-content/themes/timber-starter-theme/static/js/html5shiv.js"></script>
+      <script src="wp-content/themes/timber-starter-theme/static/js/respond.min.js"></script>
+    <![endif]-->
+    {{function(wp_head)}}
+{# <!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{site.language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{site.language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<head>
+    <meta charset="{{site.charset}}" />
+        <title>   
+            {% if wp_title %}
+                {{ wp_title }} - {{ site.name }}
+            {% else %}
+                {{ site.name }}
+            {% endif %}
+        </title>
+    <meta name="description" content="{{site.description}}">
+    <link rel="stylesheet" href="{{site.theme.link}}/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="{{site.pingback_url}}" />
+    {{function('wp_head')}}
+ #}
