@@ -15,9 +15,8 @@
 
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
+$context['image'] = new TimberImage(34);
 $context['foo'] = 'bar';
-$templates = array( 'index.twig' );
-if ( is_home() ) {
-	array_unshift( $templates, 'home.twig' );
-}
-Timber::render( $templates, $context );
+
+
+Timber::render( 'base.twig', $context );
