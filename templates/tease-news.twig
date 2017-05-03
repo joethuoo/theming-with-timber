@@ -1,0 +1,42 @@
+{% block news %}
+     <section id="news" class="news">
+		<div class="container">
+			<div class="down-arrow-color"></div>
+			<div class="row text-center">
+				<h3 class="title">
+					Get Up to Date
+					<span class="title-head">Latest Update From News</span>
+				</h3>
+			</div><!--/ Title row end -->
+
+			<div class="row">
+				{% for new in news|slice(0,3) %}
+				<div class="col-md-4 col-xs-12">
+					
+					<div class="latest-post">
+						<img class="img-responsive" src="{{new.thumbnail.src}}" alt="img">
+						<div class="post-body">
+							<h4 class="post-title">
+								<a href="#">{{new.title}}</a>
+							</h4>
+							<span class="post-item-date">
+								<i class="fa fa-clock-o"></i> {{new.get_date}}
+							</span>
+							<span class="post-item-author">
+								<i class="fa fa-user"></i> {{new.get_author}}
+							</span>
+							<div class="post-text">
+								<p>{{new.get_content(20)}}</p>
+							</div>
+						</div>	
+						<a href="{{new.link}}" class="btn btn-primary">Read More</a>
+					</div><!-- Latest post end -->
+					
+				</div><!-- 1st post col end -->
+               {% endfor %}
+				
+
+			</div><!--/ Content row end -->
+		</div><!--/ Container end -->
+	</section><!--/ News end -->
+{% endblock %}

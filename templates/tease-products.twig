@@ -1,0 +1,34 @@
+{% block product %}
+<section id="product-area" class="product-area" style="background-image:url(wp-content/themes/timber-starter-theme/static/img/product-bg.jpg)">
+		<div class="container">
+			<div class="row text-center">
+				<h2 class="title">
+					We've Got You Covered
+					<span class="title-head">Insurance Product</span>
+				</h2>
+			</div><!--/ Title row end -->
+
+
+			<div class="row">
+				<div id="isotope" class="isotope">
+					{% for p in products %}
+					<div class="col-sm-4 col-xs-12 life isotope-item">
+						<div class="isotop-img-conatiner">
+							<img class="img-responsive" src="{{p.thumbnail.src}}" alt="">	
+							<div class="isotope-item-info">
+								<h3 class="isotope-item-title"><a href="{{p.link}}">{{p.title}}</a></h3>
+								<p><a href="{{p.link}}" class="btn btn-primary">Read More</a></p>
+							</div>
+						</div>
+					</div><!-- Isotope item 1 end -->
+                    {% endfor %}
+
+					
+
+				</div><!-- Isotope end -->
+			</div><!-- Content Row -->
+
+		</div><!--/ Container end -->
+		<div class="down-arrow-white"></div>
+	</section><!-- Product area end -->
+	{% endblock %}

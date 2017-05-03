@@ -1,0 +1,118 @@
+	<div id="top-bar" class="top-bar">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-6 col-sm-6 col-xs-12 top-social">
+					<ul class="unstyled">
+						<li>
+							<a title="Facebook" href="https://www.facebook.com/Proffer-Insurance-Agency-864746480294733/?ref=aymt_homepage_panel">
+								<span class="social-icon"><i class="fa fa-facebook"></i></span>
+							</a>
+							<a title="Twitter" href="https://twitter.com/proffer_insure">
+								<span class="social-icon"><i class="fa fa-twitter"></i></span>
+							</a>
+							<a title="Google+" href="https://plus.google.com/u/0/117437247604152551731">
+								<span class="social-icon"><i class="fa fa-google-plus"></i></span>
+							</a>
+							<a title="Linkdin" href="https://www.linkedin.com/in/francis-karanja-2660a5139/">
+								<span class="social-icon"><i class="fa fa-linkedin"></i></span>
+							</a>
+							<a title="instagram" href="https://www.instagram.com/profferfrancis/">
+								<span class="social-icon"><i class="fa fa-instagram"></i></span>
+							</a>
+						</li>
+					</ul>
+				</div><!--/ Top social end -->
+
+				<div class="col-md-6 col-sm-6 col-xs-12 top-menu ">
+					<ul class="unstyled">
+						<li><a href="#">Claim &amp; Policy</a></li>
+						<li><a href="#">Make a Claim</a></li>
+						<li><a href="#">Track Your Claim</a></li>
+					</ul>
+				</div><!--/ Top menu end -->
+
+			</div><!--/ Content row end -->
+		</div><!--/ Container end -->
+	</div><!--/ Topbar end -->
+
+	<!-- Header start -->
+	<header id="header" class="header-light nav-style-boxed">
+	{% block header %}
+		<div class="container">
+			<div class="row">
+				<div class="logo col-xs-12 col-sm-3">
+                <a href="index.html">
+                	<img src="wp-content/uploads/2017/03/hands-logo-2.png" alt="">
+                </a>
+         	</div><!-- logo end -->
+
+         	<div class="col-xs-12 col-sm-7 header-right">
+         		<ul class="top-info">
+						<li>
+							<div class="info-box"><span class="info-icon"><i class="fa fa-map-marker">&nbsp;</i></span>
+								<div class="info-box-content">
+									<p class="info-box-title"> 24/7 House KIAMBU TOWN </p>
+									<p class="info-box-subtitle">3rd floor suite C3</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="info-box"><span class="info-icon"><i class="fa fa-phone">&nbsp;</i></span>
+								<div class="info-box-content">
+									<p class="info-box-title"> (+254) 723081004</p>
+									<p class="info-box-subtitle">fonkaranja@gmail.com</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="info-box"><span class="info-icon"><i class="fa fa-compass">&nbsp;</i></span>
+								<div class="info-box-content">
+									<p class="info-box-title">08.00 - 18.00</p>
+									<p class="info-box-subtitle">Monday to Friday</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+         	</div><!-- header right end -->
+			</div><!-- Row end -->
+		</div><!-- Container end -->
+
+		<nav class="site-navigation navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="site-nav-inner pull-left">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						      <span class="sr-only">Toggle navigation</span>
+						      <span class="icon-bar"></span>
+						      <span class="icon-bar"></span>
+						      <span class="icon-bar"></span>
+			    			</button>
+
+			    			<div class="collapse navbar-collapse navbar-responsive-collapse">
+			    			     {% if menu %}
+									<ul class="nav navbar-nav">
+								        {% for item in menu.get_items %}       	
+										<li class="{{item.classes | join(' ')}}">
+								             <a href="{{item.get_link}}" data-toggle="dropdown">{{ item.title }} </a>
+								        </li>
+								          {% endfor %}
+								   </ul><!--/ Nav ul end -->
+								{% endif %}
+			    			</div><!--/ Collapse end -->
+
+						</div><!-- Site Navbar inner end -->
+
+						<div class="find-agent pull-right">
+			    			<a href="#">Welcome</a>
+			    		</div>
+
+
+					</div><!--/ Cold end -->
+				</div><!--/ Row end -->
+			</div><!--/ Container end -->
+
+		</nav><!--/ Navigation end -->
+		{% endblock %}
+	</header><!--/ Header end -->

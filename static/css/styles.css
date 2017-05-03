@@ -1242,13 +1242,12 @@ ul.navbar-nav > li > a i{
 /*-- Content Box slide --*/
 
 
-
 .box-slide .item{
-   background:url('wp-content/themes/timber-starter-theme/css/bg3.jpg');
    min-height: 600px;
    background-position: 50% 50%;
    -webkit-background-size: cover;
    background-size: cover;
+   background-repeat: no-repeat;
    -webkit-backface-visibility: hidden;
 }
 

@@ -14,9 +14,22 @@
  */
 
 $context = Timber::get_context();
-$context['posts'] = Timber::get_posts();
-$context['image'] = new TimberImage(34);
-$context['foo'] = 'bar';
+$menu    = new TimberMenu(3);
+$context['menu'] = $menu;
+$query   = array(
+	//'numberposts' => 3,
+	'category_name' => 'News',
+);
+$product = array('category_name' => 'Products');
+$context['products'] = Timber::get_posts($product);
+
+$context['news'] = Timber::get_posts($query);
+
+$templates = array('index.twig');
+
+if (is_home()) {
+	array_unshift($templates, 'home.twig');
+}
+Timber::render($templates,$context);
 
 
-Timber::render( 'base.twig', $context );
