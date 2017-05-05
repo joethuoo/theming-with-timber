@@ -15,3 +15,5 @@ Debugged the warning error by using this help from stackoverflow:
 https://stackoverflow.com/questions/43263238/warning-call-user-func-array-expects-parameter-1-to-be-a-valid-callback-timb
 
 Done some template refactor just to improve the structure of the front-end and better readability.
+
+All pages conveted to Twig templates. 
