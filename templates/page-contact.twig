@@ -1,0 +1,102 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+
+	<section id="main-container" class="main-container">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+					<div id="map" class="map"></div>
+
+				</div><!-- Content col end -->
+
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+					<div class="sidebar sidebar-right">
+						<div class="widget">
+							<h3 class="widget-title">Contact us</h3>
+
+							<div class="contact-info-box">
+								<i class="fa fa-map-marker">&nbsp;</i>
+								<div class="contact-info-box-content">
+									<h4>Address</h4>
+									<p>Proffer Insurance Agency, KIAMBU TOWN, 24/7 House Office C3 3rd Floor, Equity Bank Kiambu.</p>
+								</div>
+							</div>
+
+							<div class="contact-info-box">
+								<i class="fa fa-phone">&nbsp;</i>
+								<div class="contact-info-box-content">
+									<h4>Phone</h4>
+									<p>+254	723081004</p>
+									<p>+254 723081004</p>
+								</div>
+							</div>
+
+							<div class="contact-info-box">
+								<i class="fa fa-envelope">&nbsp;</i>
+								<div class="contact-info-box-content">
+									<h4>Email</h4>
+									<p>fonkaranja@gmail.com</p>
+									<p>profferinsurance@gmail.com</p>
+								</div>
+							</div>
+
+						</div><!-- Widget end -->
+
+					</div><!-- Sidebar end -->
+				</div><!-- Sidebar Col end -->
+			
+			</div><!-- Content row -->
+		</div><!-- Conatiner end -->
+	</section><!-- Main container end -->
+
+	<section id="contact" class="contact-three">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					
+	    			<h3 class="contact-form-title">Contact Form</h3>
+
+	    			<form id="contact-form" action="contact-form.php" method="post" role="form">
+	    				<div class="error-container"></div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Name</label>
+								<input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Email</label>
+									<input class="form-control form-control-email" name="email" id="email" 
+									placeholder="" type="email" required>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label>Subject</label>
+									<input class="form-control form-control-subject" name="subject" id="subject" 
+									placeholder="" required>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Message</label>
+							<textarea class="form-control form-control-message" name="message" id="message" placeholder="" rows="10" required></textarea>
+						</div>
+						<div class="text-right"><br>
+							<button class="btn btn-primary solid blank" type="submit">Send Message</button> 
+						</div>
+					</form>
+	    		</div>
+			</div>
+		</div>
+	</section><!-- Cotact form end -->
+
+
+	
+
+{% endblock %}

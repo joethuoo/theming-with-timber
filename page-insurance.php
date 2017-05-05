@@ -1,6 +1,5 @@
 <?php
 /**
- *My custom insurance page
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -21,14 +20,8 @@
  * @subpackage  Timber
  * @since    Timber 0.1
  */
-/*
-$context = Timber::get_context();
-$post = new TimberPost();
-$context['post'] = $post;
-Timber::render('page.twig', $context );*/
+
 $context = Timber::get_context();
 $post = new TimberPost(13);
 $context['post'] = $post;
-$context['hello'] = "hello world timber here";
-//Timber::render('page-insurance-services.twig', $context);
-Timber::render(array('page-' . $post->post_name . '.twig', 'page-insurance-services.twig'), $context);
+Timber::render( array( 'page-' . $post->post_name . '.twig', 'page-insurance.twig' ), $context );

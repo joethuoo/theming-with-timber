@@ -14,22 +14,27 @@
  */
 
 $context = Timber::get_context();
-$menu    = new TimberMenu(3);
-$context['menu'] = $menu;
+$menu_id = get_term_by('slug','menu','nav_menu')->term_id;
+//$menu    = new TimberMenu(3);
+$context['menu'] = new TimberMenu($menu_id);
+
+$product = array('category_name' => 'Products');
+$context['products'] = Timber::get_posts($product);
+
 $query   = array(
 	//'numberposts' => 3,
 	'category_name' => 'News',
 );
-$product = array('category_name' => 'Products');
-$context['products'] = Timber::get_posts($product);
-
 $context['news'] = Timber::get_posts($query);
 
 $templates = array('index.twig');
 
-if (is_home()) {
+$post = new TimberPost(10);
+$context['post'] = $post;
+
+/*if (is_front_page()) {
 	array_unshift($templates, 'home.twig');
-}
-Timber::render($templates,$context);
+}*/
+Timber::render(array('page-' . $post->post_name . '.twig', 'home.twig' ),$context);
 
 

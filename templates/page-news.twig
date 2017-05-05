@@ -1,0 +1,196 @@
+{% extends 'base.twig' %}
+{% block content %}
+       
+      <section id="main-container" class="main-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+					<div class="post">
+						
+						<div class="post-media post-video">
+							<div class="embed-responsive">
+								<!-- Change the url -->
+								<iframe src="//player.vimeo.com/video/119907734?title=0&amp;byline=0&amp;portrait=0&amp;color=8aba56" width="500" height="281" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="post-body">
+							<div class="entry-header">
+								<span class="post-meta-date"><i class="fa fa fa-clock-o"></i> 17 October 2015</span>
+   							<h2 class="entry-title">
+					 				<a href="#">Low interest rates, rising equities boost global insurer mergers</a>
+					 			</h2>
+					 			<div class="post-meta">
+									<span class="post-author">
+   									Posted By <a href="#">Admin</a>
+   								</span>
+									<span class="post-cat">
+   									Posted In: <a href="#">Insurance, Policy</a>
+   								</span>
+									<span class="post-comment">01<a href="#" class="comments-link">Comments</a></span>
+								</div>
+							</div><!-- header end -->
+
+							<div class="entry-content">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  ...</p>
+							</div>
+
+							<div class="post-footer">
+								<a href="news-single.html" class="btn btn-primary">Continue Reading</a>
+							</div>
+
+						</div><!-- post-body end -->
+					</div><!-- 2nd post end -->
+                  
+                   {% for item in newsletter %}
+					<div class="post">
+						<div class="post-media post-image">
+							<img src="{{item.thumbnail.src}}" class="img-responsive" alt="">
+						</div>
+
+						<div class="post-body">
+							<div class="entry-header">
+								<span class="post-meta-date"><i class="fa fa fa-clock-o"></i>{{item.get_date}}</span>
+   							<h2 class="entry-title">
+					 				<a href="#">{{item.title}}</a>
+					 			</h2>
+					 			<div class="post-meta">
+									<span class="post-author">
+   									Posted By <a href="#">{{item.get_author}}</a>
+   								</span>
+									{# <span class="post-cat">
+   									Posted In: <a href="#">Insurance, Policy</a>
+   								</span> #}
+									{# <span class="post-comment">03<a href="#" class="comments-link">Comments</a></span> #}
+								</div>
+							</div><!-- header end -->
+
+							<div class="entry-content">
+								<p>{{item.get_content(30)}}</p>
+							</div>
+
+							<div class="post-footer">
+								<a href="{{item.link}}" class="btn btn-primary">Continue Reading</a>
+							</div>
+
+						</div><!-- post-body end -->
+					</div><!-- 3rd post end -->
+                   {% endfor %}
+			    {# <div class="paging text-center">
+		            <ul class="pagination">
+		              <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+		              <li class="active"><a href="#">1</a></li>
+		              <li><a href="#">2</a></li>
+		              <li><a href="#">3</a></li>
+		              <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+		            </ul>
+	          	</div> #}
+
+
+				</div><!-- Content Col end -->
+
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+					<div class="sidebar sidebar-right">
+
+						<div class="widget widget-search">
+							<div id="search" class="input-group">
+								{# <input class="form-control" placeholder="Search" type="search">
+								<span class="input-group-btn">
+									<i class="fa fa-search"></i>
+								</span> #}
+							</div>
+						</div><!-- Search end -->
+
+						 {# <div class="widget recent-posts">
+							<h3 class="widget-title">Recent Posts</h3>
+							<ul class="unstyled clearfix">
+		               	<li>
+		                    <div class="posts-thumb pull-left"> 
+		                    		<a href="#"><img alt="img" src="images/news/news1.jpg"></a>
+		                    </div>
+		                    <div class="post-info">
+		                        <h4 class="entry-title">
+		                        	<a href="#">Health insurer out risk-based deal for costly cholesterol</a>
+		                        </h4>
+										<span class="post-date"> January 27, 2016</span>
+		                    </div>
+		                    <div class="clearfix"></div>
+		                  </li><!-- 1st post end-->
+
+		                  <li>
+		                    <div class="posts-thumb pull-left"> 
+		                    		<a href="#"><img alt="img" src="images/news/news2.jpg"></a>
+		                    </div>
+		                    <div class="post-info">
+		                        <h4 class="entry-title">
+		                        	<a href="#">This is another lorem ipsum post title of the day</a>
+		                        </h4>
+										<span class="post-date"> February 11, 2016</span>
+		                    </div>
+		                    <div class="clearfix"></div>
+		                  </li><!-- 1st post end-->
+
+		                  <li>
+		                    <div class="posts-thumb pull-left"> 
+		                    		<a href="#"><img alt="img" src="images/news/news3.jpg"></a>
+		                    </div>
+		                    <div class="post-info">
+		                        <h4 class="entry-title">
+		                        	<a href="#">Low interest rates, rising equities boost insurer mergers</a>
+		                        </h4>
+										<span class="post-date"> February 19, 2015</span>
+		                    </div>
+		                    <div class="clearfix"></div>
+		                  </li><!-- 1st post end-->
+		               </ul> 
+							
+						</div><!-- Recent post end --> #}
+
+						{# <div class="widget">
+							<h3 class="widget-title">Categories</h3>
+							<ul class="arrow nav nav-tabs nav-stacked">
+		                  <li><a href="#">Insurance</a></li>
+		                  <li><a href="#">Risk Management</a></li>
+		                  <li><a href="#">Policy</a></li>
+		                  <li><a href="#">Mergers</a></li>
+		                  <li><a href="#">Agency</a></li>
+		              	</ul>
+						</div><!-- Categories end -->
+ #}
+						{# <div class="widget">
+							<h3 class="widget-title">Archives </h3>
+							<ul class="arrow nav nav-tabs nav-stacked">
+			              	<li><a href="#">Feburay 2016</a></li>
+		                  <li><a href="#">January 2016</a></li>
+		                  <li><a href="#">December 2015</a></li>
+		                  <li><a href="#">November 2015</a></li>
+		                  <li><a href="#">October 2015</a></li>
+			            </ul>
+						</div><!-- Archives end --> #}
+
+						{# <div class="widget widget-tags">
+							<h3 class="widget-title">Insurance </h3>
+							<ul class="unstyled clearfix">
+			              	<li><a href="#">Policy</a></li>
+		                  <li><a href="#">Benefits</a></li>
+		                  <li><a href="#">Mortgage</a></li>
+		                  <li><a href="#">Agency</a></li>
+		                  <li><a href="#">Risk Share</a></li>
+		                  <li><a href="#">Technology</a></li>
+			            </ul>
+						</div><!-- Tags end --> #}
+
+
+					</div><!-- Sidebar end -->
+				</div><!-- Sidebar Col end -->
+
+			</div><!-- Main row end -->
+
+		</div><!-- Conatiner end -->
+	</section><!-- Main container end -->
+
+
+
+{% endblock %}

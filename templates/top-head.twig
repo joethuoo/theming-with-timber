@@ -95,7 +95,7 @@
 									<ul class="nav navbar-nav">
 								        {% for item in menu.get_items %}       	
 										<li class="{{item.classes | join(' ')}}">
-								             <a href="{{item.get_link}}" data-toggle="dropdown">{{ item.title }} </a>
+								             <a href="{{item.get_link}}" data-toggle="">{{ item.title }} </a>
 								        </li>
 								          {% endfor %}
 								   </ul><!--/ Nav ul end -->
